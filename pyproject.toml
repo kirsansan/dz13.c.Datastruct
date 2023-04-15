@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "dz13-c-datastruct"
+version = "0.1.0"
+description = ""
+authors = ["kirsansan <kirill_home@mail.ru>"]
+readme = "README.md"
+packages = [{include = "dz13"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
