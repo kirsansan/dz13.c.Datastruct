@@ -1,9 +1,19 @@
+from datatypes.node import Node
+
 class Stack:
-    last_reference = None
+    length: int = 0
+    top = None
 
-    def __init__(self, object, reference):
-        self.data = object
-        self.next_data = reference
-        if Stack.last_reference is not None:
-            Stack.last_reference = self
 
+    def push(self, object):
+        if Stack.length == 0:
+            self.node: Node = Node(object, None)
+            Stack.top = self.node
+        else:
+            self.node :Node = Node(object, Stack.top)
+        Stack.length += 1
+        Stack.top = self.node
+
+
+    def pop(self):
+        ...
