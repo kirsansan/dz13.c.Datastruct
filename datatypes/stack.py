@@ -15,5 +15,5 @@ class Stack:
         Stack.top = self.node
 
 
-    def pop(self):
-        ...
+    # def pop(self):
+    #     ...
