@@ -9,7 +9,7 @@ if __name__ == '__main__':
     print(n2.data)
     print(n1)
     print(n2)
-    print(n2.next_node)
+    print(n2.next_node, "\n")
 
     stack = Stack()
     stack.push('data1')
@@ -19,5 +19,7 @@ if __name__ == '__main__':
     print(stack.top.next_node.data)
     print(stack.top.next_node.next_node.data)
     print(stack.top.next_node.next_node.next_node)
-    print(stack.top.next_node.next_node.next_node.data)
-    #print(stack.top.next_node.next_node.next_node.next_node.data)
+    #print(stack.top.next_node.next_node.next_node.data)
+
+    for x in range(0, 4):
+        print(stack.pop())
