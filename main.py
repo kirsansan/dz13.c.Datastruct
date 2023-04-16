@@ -1,6 +1,7 @@
 from datatypes.node import Node
 from datatypes.stack import Stack
 from datatypes.queue import Queue
+from datatypes.linkedlist import LinkedList
 
 if __name__ == '__main__':
 
@@ -32,3 +33,10 @@ if __name__ == '__main__':
     print("current length of queue is ", len(queue))
     for _ in range(0, 4):
         print("remove result is ", queue.remove())
+
+    llist = LinkedList()
+    llist.add_to_tail('llist1')
+    llist.add_to_tail({"name": "somedata2", "value": "somevalue2"})
+    llist.add_to_head('llist0')
+    print(llist)
+    print(len(llist))
