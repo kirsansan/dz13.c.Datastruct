@@ -1,5 +1,6 @@
 from datatypes.node import Node
 from datatypes.stack import Stack
+from datatypes.queue import Queue
 
 if __name__ == '__main__':
 
@@ -21,5 +22,13 @@ if __name__ == '__main__':
     print(stack.top.next_node.next_node.next_node)
     #print(stack.top.next_node.next_node.next_node.data)
 
-    for x in range(0, 4):
-        print(stack.pop())
+    for _ in range(0, 4):
+        print("pop result is ", stack.pop())
+
+    queue = Queue()
+    queue.add('queue1')
+    queue.add('queue2')
+    queue.add('queue3')
+    print("current length of queue is ", len(queue))
+    for _ in range(0, 4):
+        print("remove result is ", queue.remove())

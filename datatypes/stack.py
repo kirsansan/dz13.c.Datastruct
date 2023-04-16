@@ -1,27 +1,30 @@
 from datatypes.node import Node
 
 class Stack:
-    length: int = 0
-    top = None
+
+
+    def __init__(self):
+        self.length: int = 0
+        self.top = None
 
 
     def push(self, object):
         """Push a new object Node-type to the stack"""
-        if Stack.length == 0:
-            self.node: Node = Node(object, None)
-            Stack.top = self.node
+        if self.length == 0:
+            self.top = Node(object, None)
         else:
-            self.node: Node = Node(object, Stack.top)
-        Stack.length += 1
-        Stack.top = self.node
+            tmp_node: Node = Node(object, self.top)
+            self.top = tmp_node
+        self.length += 1
+
 
 
     def pop(self):
         """Pop the data
             hope __del__() for old Node will be called automatically
         """
-        if Stack.length > 0:
-            Stack.length -= 1
-            tmp_data = Stack.top.data
-            Stack.top = Stack.top.next_node
+        if self.length > 0:
+            self.length -= 1
+            tmp_data = self.top.data
+            self.top = self.top.next_node
             return tmp_data

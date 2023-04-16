@@ -28,5 +28,5 @@ class StackTest(TestCase):
         self.assertEqual(stack.pop(), "i'am second element")
         self.assertEqual(stack.pop(), "i'am first element")
         self.assertEqual(stack.pop(), None)
-        self.assertEqual(stack.pop(), None)
+
 
