@@ -9,6 +9,7 @@ packages = [{include = "dz13"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 coverage = "^7.2.3"
+mypy = "^1.2.0"
 
 
 [build-system]
