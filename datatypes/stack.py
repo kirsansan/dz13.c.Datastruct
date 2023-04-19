@@ -4,7 +4,7 @@ from datatypes.node import Node
 class Stack:
 
     def __init__(self):
-        self.length: int = 0
+        self.length = 0
         self.top = None
 
     def push(self, object):

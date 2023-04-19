@@ -4,14 +4,14 @@ class LinkedList:
 
 
     def __init__(self):
-        self.length: int = 0
+        self.length = 0
         self.head = None
         self.tail = None
 
 
     def add_to_tail(self, object):
         """add a new object Node-type to the tail"""
-        tmp_node: Node = Node(object, None)
+        tmp_node = Node(object, None)
         if self.length == 0:
             self.head = tmp_node
         else:
@@ -22,7 +22,7 @@ class LinkedList:
 
     def add_to_head(self, object):
         """add a new object Node-type to the head"""
-        tmp_node: Node = Node(object, self.head)
+        tmp_node = Node(object, self.head)
         self.head = tmp_node
         self.length += 1
 
