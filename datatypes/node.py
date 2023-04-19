@@ -1,6 +1,6 @@
 class Node:
 
-    def __init__(self, object, reference):
+    def __init__(self, object, reference=None):
         self.data = object
         self.next_node = reference
 

@@ -6,7 +6,7 @@ from datatypes.linkedlist import LinkedList
 if __name__ == '__main__':
 
 # node types
-    n1 = Node(5, None)
+    n1 = Node(6)
     n2 = Node('a', n1)
     print(n1.data)
     print(n2.data)

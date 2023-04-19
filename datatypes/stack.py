@@ -1,12 +1,11 @@
 from datatypes.node import Node
 
-class Stack:
 
+class Stack:
 
     def __init__(self):
         self.length: int = 0
         self.top = None
-
 
     def push(self, object):
         """Push a new object Node-type to the stack"""
@@ -17,8 +16,6 @@ class Stack:
             self.top = tmp_node
         self.length += 1
 
-
-
     def pop(self):
         """Pop the data
             hope __del__() for old Node will be called automatically
@@ -28,3 +25,7 @@ class Stack:
             tmp_data = self.top.data
             self.top = self.top.next_node
             return tmp_data
+
+    def __len__(self):
+        """just return the length (polymorphism does matter)"""
+        return self.length

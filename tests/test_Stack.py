@@ -3,6 +3,7 @@ from unittest import TestCase
 from datatypes.node import Node
 from datatypes.stack import Stack
 
+
 class StackTest(TestCase):
     def test_stack_init_and_push(self):
         stack = Stack()
@@ -29,4 +30,10 @@ class StackTest(TestCase):
         self.assertEqual(stack.pop(), "i'am first element")
         self.assertEqual(stack.pop(), None)
 
-
+    def test_length(self):
+        stack = Stack()
+        self.assertEqual(len(stack), 0)
+        stack.push("i'am first element")
+        stack.push(2)
+        stack.push("i'am third element")
+        self.assertEqual(len(stack), 3)
