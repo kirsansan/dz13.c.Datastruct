@@ -50,5 +50,20 @@ class LinkedList:
                 tmp_string += f" {str(node.data)} ->"
                 node = node.next_node
             tmp_string += ' None'
-
             return tmp_string
+
+    def to_list(self):
+        """
+        :return: list with all nodes data
+        """
+        tmp_list = []
+        node = self.head
+        if node is None:
+            return None
+        while node:
+            tmp_list.append(node.data)
+            node = node.next
+        return tmp_list
+
+    def get_data_by_id(self):
+        ...

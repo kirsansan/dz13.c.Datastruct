@@ -4,14 +4,14 @@ class Queue:
 
 
     def __init__(self):
-        self.length: int = 0
+        self.length = 0
         self.head = None
         self.tail = None
 
 
     def add(self, object):
         """add a new object Node-type to the tail"""
-        tmp_node: Node = Node(object, None)
+        tmp_node = Node(object, None)
         if self.length == 0:
             self.head = tmp_node
         else:
