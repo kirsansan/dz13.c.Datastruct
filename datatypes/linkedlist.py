@@ -65,5 +65,26 @@ class LinkedList:
             node = node.next
         return tmp_list
 
-    def get_data_by_id(self):
-        ...
+    def get_data_by_id(self, search_id):
+        node = self.head
+        if node is None:
+            return None
+        while node:
+            # print(node.data)
+            try:
+                if node.data["id"] == search_id:
+                    return node.data
+                else:
+                    print("I see some dict but without included 'id' field")
+                    node = node.next_node
+                    continue
+            except:
+                print("some shit in data types")
+                # print(node.next_node)
+                if node.next_node:
+                    node = node.next_node
+                    continue
+                else:
+                    return None
+
+
