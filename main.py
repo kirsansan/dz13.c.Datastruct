@@ -45,6 +45,7 @@ if __name__ == '__main__':
     llist.add_to_head('llist0')
     print(llist)
     print("current length of linked_list is ", len(llist))
-    llist.add_to_tail({"id": 2, "somedata": "something"})
+    llist.add_to_tail({"id": 5, "somedata5": "nothing"})
+    llist.add_to_tail({"id": 2, "somedata2": "something"})
     print(llist)
     print(llist.get_data_by_id(2))

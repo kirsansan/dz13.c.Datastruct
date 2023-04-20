@@ -14,7 +14,7 @@ class StackTest(TestCase):
         self.assertEqual(stack.top.next_node.data, "i'am second element")
         self.assertEqual(stack.top.next_node.next_node.data, "i'am first element")
         try:
-            hehe = stack.top.next_node.next_node.next_node.data
+            stack.top.next_node.next_node.next_node.data
         except AttributeError:
             pass
         stack.push({"name": "foo", 5: "bar"})

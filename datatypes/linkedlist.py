@@ -67,24 +67,19 @@ class LinkedList:
 
     def get_data_by_id(self, search_id):
         node = self.head
-        if node is None:
-            return None
         while node:
-            # print(node.data)
             try:
                 if node.data["id"] == search_id:
                     return node.data
                 else:
-                    print("I see some dict but without included 'id' field")
-                    node = node.next_node
-                    continue
-            except:
-                print("some shit in data types")
-                # print(node.next_node)
-                if node.next_node:
-                    node = node.next_node
-                    continue
-                else:
-                    return None
+                    print("I see some dict with id but this 'id' isn't interested for me")
+            except TypeError:
+                print("some shit in data")
+            except KeyError:
+                print("wrong key in dict data")
+            if node.next_node:
+                node = node.next_node
+            else:
+                return None
 
 
