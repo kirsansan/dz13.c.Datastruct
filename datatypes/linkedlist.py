@@ -1,13 +1,12 @@
 from datatypes.node import Node
 
-class LinkedList:
 
+class LinkedList:
 
     def __init__(self):
         self.length = 0
         self.head = None
         self.tail = None
-
 
     def add_to_tail(self, object):
         """add a new object Node-type to the tail"""
@@ -19,13 +18,11 @@ class LinkedList:
         self.tail = tmp_node
         self.length += 1
 
-
     def add_to_head(self, object):
         """add a new object Node-type to the head"""
         tmp_node = Node(object, self.head)
         self.head = tmp_node
         self.length += 1
-
 
     def remove_from_head(self):
         """remove the data from the head of Queue
@@ -42,15 +39,15 @@ class LinkedList:
         return self.length
 
     def __str__(self):
-            tmp_string = ""
-            node = self.head
-            if node is None:
-                return None
-            while node:
-                tmp_string += f" {str(node.data)} ->"
-                node = node.next_node
-            tmp_string += ' None'
-            return tmp_string
+        tmp_string = ""
+        node = self.head
+        if node is None:
+            return None
+        while node:
+            tmp_string += f" {str(node.data)} ->"
+            node = node.next_node
+        tmp_string += ' None'
+        return tmp_string
 
     def to_list(self):
         """
@@ -62,7 +59,7 @@ class LinkedList:
             return None
         while node:
             tmp_list.append(node.data)
-            node = node.next
+            node = node.next_node
         return tmp_list
 
     def get_data_by_id(self, search_id):
@@ -87,5 +84,3 @@ class LinkedList:
                 node = node.next_node
             else:
                 return None
-
-
