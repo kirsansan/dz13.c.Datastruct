@@ -54,7 +54,7 @@ class LinkedList:
 
     def to_list(self):
         """
-        :return: list with all nodes data
+        :return: list with all node's data
         """
         tmp_list = []
         node = self.head
@@ -66,6 +66,12 @@ class LinkedList:
         return tmp_list
 
     def get_data_by_id(self, search_id):
+        """
+        we are waiting for id which will be searched in every dictionary in our data
+        non dictionary data will take exception, however we will intercept it
+        :param search_id:
+        :return: dictionary with field "id" == search_id
+        """
         node = self.head
         while node:
             try:
