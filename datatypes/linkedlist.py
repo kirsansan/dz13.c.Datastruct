@@ -42,7 +42,7 @@ class LinkedList:
         tmp_string = ""
         node = self.head
         if node is None:
-            return None
+            return "None"
         while node:
             tmp_string += f" {str(node.data)} ->"
             node = node.next_node
