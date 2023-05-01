@@ -13,7 +13,7 @@ class QueueTest(TestCase):
         self.assertEqual(queue.head.next_node.data, 2)
         self.assertEqual(queue.head.next_node.next_node.data, "i'am third element")
         try:
-            hehe = queue.head.next_node.next_node.next_node.data
+            temp_value = queue.head.next_node.next_node.next_node.data
         except AttributeError:
             pass
         queue.add({"name": "foo", 5: "bar"})
